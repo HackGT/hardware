@@ -12,7 +12,7 @@ Code can be built and flashed with the Arduino IDE with [ATtiny Core](https://gi
 
 ## Insight
 ![Insight PCB](https://644db4de3505c40a0444-327723bce298e3ff5813fb42baeefbaa.ssl.cf1.rackcdn.com/57f27d0ea22f6fa49fed8beb04706f60.png)
-![Built Insight PCB](https://lh3.googleusercontent.com/cdpeYnyMt77fj7jsle3-hDfk1LzlNOlYmdj_BRotyCT0eU8fpWYrXZLdwOZeUA036xB6iQL9JKsyTWave5wo4fOb8HVa4vQArdmATb5zc18GBUxAwXpdGwQNeBMqbLGLltIUN3L5EtYUT-hAHapb8emUB21f4DZZ577OSXRa5CDvDcrQHiTQG32VNSVk5O151iJgj1laZU62Fzhft36-sOvVS6NqYHEy1RQzsw9P0ScGDkA7s3JKTHxhnQ00xvT1Tj9OzpHHtwlPq9pLwMw2RkA5Z-M69FxYu1SPToYZfeqDRUFE0iea5D5DsfTGfF7fgAqNFLwcAV1erNJPlQA10a6OMSGgPZ9jijB39pJPHwGpGAHzwx0O86jxQ7UZ84iIRyicpEpVlnWkzc8Ukjy77cZyjpqbPwDMiP0ocqgy-i6FqHGHxDGVTjxjiIylWTUf3wOYC8uzX05JAW0qLmEtgD0Sr9xlX33jbOst9vYJ85JaNGlQF1dBs3oCTrd4cABLa1V70GURZLKBpTAlbaq5JDQ9chqILl1MT_erJFAIYj_CETplTrcWkQCuQwU22Grw0FcPkPjwcHT8rOTyHhFw3VWE_5BRMklyVaNMJIMxRe_aP2GCiSPlOqpMwWmpigPvA0dKOWbMKmxtCaPlqVl3Oly421_LGuCJaNq2jqQRqNGafpzxZ2rzvek9=w2520-h1566-no)
+![Built Insight PCB](https://i.imgur.com/EuWBPjL.jpg)
 
 * PCB: `PCBs/checkin-tiny/tiny.brd`
 * Code: `Code/Insight` and `Code/Insight_Base` (for Arduino MEGA base station)
