@@ -20,7 +20,6 @@
 
 // IMPORTANT: Set this to the ID of the label on the board
 #define BOARD_ID 1
-#define IS_EVENT_TRACKER true
 
 // Enables Serial debugging output
 // Do not enable in production in order to reduce compiled output size
@@ -53,9 +52,6 @@ void setup() {
 		Serial.print(F("Board ID is: "));
 		Serial.println(BOARD_ID);
 	#endif
-  #ifdef IS_EVENT_TRACKER
-    Serial.begin(9600);
-  #endif
 
   SPI.begin();
   mfrc522.PCD_Init();
@@ -198,8 +194,6 @@ void handleNFC() {
 
 	success();
 
-  #ifdef IS_EVENT_TRACKER
-    Serial.println(
 	bool sendSuccess = radio.sendWithRetry(BASE_STATION_ID, (const void*)(&message), sizeof(Message), RETRY_COUNT, ACK_TIMEOUT);
 	if (!sendSuccess) {
 		failure();
