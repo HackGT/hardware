@@ -17,7 +17,7 @@ Code can be built and flashed with the Arduino IDE with [ATtiny Core](https://gi
 * PCB: `PCBs/checkin-tiny/tiny.brd`
 * Code: `Code/Insight` and `Code/Insight_Base` (for Arduino MEGA base station)
 * Microcontroller: ATtiny167 @ 8 MHz internal clock
-* VCC voltage: 3.3 volts (**Note: this device *requires* a 5V to 3.3V ISP level shifter to be programmed**)
+* VCC voltage: 3.3V (**Note: this device *requires* a 5V to 3.3V ISP level shifter to be programmed**)
 * Features: 915 MHz radio, MFRC522 NFC interface, USB-C rechargeable battery, 20 pin expansion port
 
 Insight is an inexpensive, handheld board designed to be distributed to sponsors at HackGT's events. It contains an NFC reader on one end and a 915 MHz radio on the other. In typical usage, sponsors scan participant badges over NFC, the device relays the decoded participant UUID to the base station (see below), which pops the participant's information (e.g. name, resume, favorite programming languages) up on the sponsor's phone or laptop. See [HackGT Insight](https://github.com/HackGT/insight) for more information. A 915 MHz radio is used instead of Wi-Fi due to reduced cost, reduced microcontroller requirements, and so that it will have available usable bandwidth even with thousands of 2.4 GHz radios (Wi-Fi / Bluetooth) active during a HackGT event.
@@ -64,3 +64,17 @@ Pin | Signal
 18 | MOSI (SPI/ ISP)
 19 | RST (ATtiny reset, ISP)
 20 | GND
+
+## ISP 5V to 3.3V Level Shifter
+![ISP level shifter PCB](https://644db4de3505c40a0444-327723bce298e3ff5813fb42baeefbaa.ssl.cf1.rackcdn.com/6e1d70204c12f836f49d06b795b98a10.png)
+
+* PCB: `PCBs/checkin-tiny/shifter.brd`
+* Code: N/A
+* Primary IC: ‎SN74LVC245AN logic level shifter
+* VCC voltage: 5V input, 3.3V output
+
+Nearly all HackGT hardware must be programmed over ISP, a protocol used by AVR microcontrollers based on the SPI standard. This can be done with $6 USB programmers such as [this one](https://www.amazon.com/HiLetgo-ATMEGA8-Programmer-USBasp-Cable/dp/B00AX4WQ00). However, note that even though this programmer claims to support 3.3V operation, this only applies to the VCC pin; the signal lines will still operate at 5V. This can damage 5V intolerant devices connected to the SPI bus (e.g. the MFRC522 NFC chip and RFM69HCW radio on Insight).
+
+This tiny board connects to the 6-pin ISP header on the top, shifts the VCC and signal lines down to 3.3 volts, and then outputs these signals on the output ISP header on the bottom. Note that the USB programmer must be outputting 5 volts for this shifter to work correctly so be sure to configure it for 5 volt *not* 3.3 volt output.
+
+**Be sure to double check the correct ISP header orientation when soldering the male/female headers on!**
