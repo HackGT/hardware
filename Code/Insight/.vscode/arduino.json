@@ -1,0 +1,7 @@
+{
+    "programmer": "USBtinyISP",
+    "board": "ATTinyCore:avr:attinyx7",
+    "configuration": "LTO=enable,chip=167,clock=8internal,eesave=aenable,bod=disable,pinmapping=new,millis=enabled,neopixelport=porta",
+    "port": "COM3",
+    "sketch": "Insight.ino"
+}
