@@ -32,3 +32,35 @@ The base station consists of an Arduino MEGA with an Ethernet Shield and an [Ada
 * MFRC522 (NFC) and RFM69HCW (radio) are connected to the ATtiny167 over the chip's hardware SPI bus. The SPI chip select lines are pulled high to deselect them when the ATtiny is programmed over ISP.
 * A voltage divider with 4.7K ohm and 10K ohm resistors is used to measure the current battery level from the ATtiny's ADC. This read 10-bit value can then be easily converted to a voltage and/or battery percentage. See `Insight` and `Insight_Base` for the code that does this.
 * A TTL serial header is exposed on the bottom edge of the PCB for debugging use. This header does not need to be soldered for final production devices.
+
+### 20-pin expansion header
+This device supports shields / daughterboard expansions using the 20-pin expansion header.
+
+With board oriented as seen above:
+```
+[ 2 | 4 | 6 | 8 | 10 | 12 | 14 | 16 | 18 | 20 ]
+[ 1 | 3 | 5 | 7 | 9  | 11 | 13 | 15 | 17 | 19 ]
+```
+
+Pin | Signal
+----|-------
+1 | V_USB (5 volts when USB plugged in, can also be used to charge battery)
+2 | V3.3 (3.3 volts when switched on)
+3 | RF_IRQ (radio to microcontroller interrupt)
+4 | GND
+5 | RX (TTL receive)
+6 | RED (red status LED)
+7 | TX (TTL transmit)
+8 | GREEN (green status LED)
+9 | BAT_REF (raw voltage divided battery reference, 3.3V safe)
+10 | SPEAKER (connected to piezo buzzer, use with `tone()`)
+11 | AUX0 (reserved for future use)
+12 | NFC_RST (MRFC522 reset)
+13 | CE0 (radio SPI chip select)
+14 | CE1 (NFC SPI chip select)
+15 | MISO (SPI / ISP)
+16 | V_USB
+17 | SCK (SPI / ISP)
+18 | MOSI (SPI/ ISP)
+19 | RST (ATtiny reset, ISP)
+20 | GND
