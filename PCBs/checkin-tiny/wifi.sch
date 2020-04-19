@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.2">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -11138,8 +11138,8 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="16pF"/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="16pF"/>
 <part name="Q1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="CRYSTAL" device="HC49S" package3d_urn="urn:adsk.eagle:package:6240901/1" value="12 MHz"/>
-<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2"/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2"/>
+<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="10K"/>
+<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="10K"/>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="0.1uF"/>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="16pF"/>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="16pF"/>
@@ -11219,9 +11219,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <attribute name="NAME" x="-26.67" y="52.2986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-26.67" y="47.498" size="1.778" layer="96"/>
 </instance>
-<instance part="R2" gate="G$1" x="-22.86" y="45.72" smashed="yes">
-<attribute name="NAME" x="-26.67" y="47.2186" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-26.67" y="42.418" size="1.778" layer="96"/>
+<instance part="R2" gate="G$1" x="-22.86" y="43.18" smashed="yes">
+<attribute name="NAME" x="-26.67" y="44.6786" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-26.67" y="39.878" size="1.778" layer="96"/>
 </instance>
 <instance part="C4" gate="G$1" x="132.08" y="66.04" smashed="yes">
 <attribute name="NAME" x="133.604" y="66.421" size="1.778" layer="95"/>
@@ -11403,8 +11403,8 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <wire x1="-27.94" y1="50.8" x2="-33.02" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="50.8" x2="-33.02" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="-33.02" y1="48.26" x2="-33.02" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="-33.02" y1="45.72" x2="-27.94" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="-33.02" y1="48.26" x2="-33.02" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="-33.02" y1="43.18" x2="-27.94" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="48.26" x2="-40.64" y2="48.26" width="0.1524" layer="91"/>
 <junction x="-33.02" y="48.26"/>
 <label x="-40.64" y="48.26" size="1.778" layer="95"/>
@@ -11542,9 +11542,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="WIFI" gate="G$1" pin="7"/>
 <wire x1="5.08" y1="30.48" x2="-12.7" y2="30.48" width="0.1524" layer="91"/>
 <label x="-7.62" y="30.48" size="1.778" layer="95"/>
-<wire x1="-12.7" y1="30.48" x2="-12.7" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="30.48" x2="-12.7" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="-12.7" y1="45.72" x2="-17.78" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="43.18" x2="-17.78" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="U$1" pin="PD6(AIN0)"/>
